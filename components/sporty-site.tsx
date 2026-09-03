@@ -393,9 +393,9 @@ export function ScoreRow({ fixture }: { fixture: Fixture }) {
 export function YouTubeLive() { const [active, setActive] = useState(0); 
 const channel = youtubeChannels[active]; return ( <div className="yt-
 card"> <div className="sport-tabs" role="tablist"> 
-{youtubeChannels.map((c, i) => ( <button key={c.key} role="tab" aria-
-  selected={active === i} className={active === i ? 'sport-tab active' : 
-'sport-tab'} onClick={() => setActive(i)}> {c.channelName} </button> ))}
+{youtubeChannels.map((c, i) => ( 
+  <button key={c.key} role="tab" aria-selected={active === i} className={active === i ? 'sport-tab active' : 'sport-tab'} onClick={() => setActive(i)}>
+   {c.channelName} </button> ))}
  </div> <div className="yt-frame-wrap"> <iframe src=
 {latestEmbedUrl(channel.channelId)} title={`${channel.channelName} 
 on YouTube`} allow="accelerometer; autoplay; clipboard-write; 
