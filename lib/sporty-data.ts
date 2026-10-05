@@ -115,7 +115,7 @@ export const getLiveFixtures = async () => ({ live: Boolean(process.env.API_FOOT
 export type YoutubeChannel = { key: string; channelId: string; channelName: string; channelUrl: string }
 export const youtubeChannels: YoutubeChannel[] = [
  { key: 'epl', channelId: 'UCG5qGWdu8nIRZqJ_GgDwQ-w', channelName: 'Premier League', channelUrl: 'https://www.youtube.com/@premierleague' },
- { key: 'laliga', channelId: 'UCTv-XvfzLX3i4IGWAm4sbmA', channelName: 'LALIGA', channelUrl: 'https://www.youtube.com/@LaLiga' },
+ { key: 'espn', channelId: 'UCiWLfSweyRNmLpgEHekhoAg', channelName: 'ESPN', channelUrl: 'https://www.youtube.com/@espn' },
  { key: 'supersport', channelId: 'UCZH6G3Z5XINU6r92QN1l5Lw', channelName: 'SuperSport (DStv/GOtv)', channelUrl: 'https://www.youtube.com/@supersport' },
  { key: 'bundesliga', channelId: 'UC6UL29enLNe4mqwTfAyeNuw', channelName: 'Bundesliga', channelUrl: 'https://www.youtube.com/@Bundesliga' },
 ]
@@ -209,7 +209,7 @@ export const topScorersByLeague: Record<LeagueKey, ScorerRow[]> = {
 export type VideoItem = { id: string; title: string; category: string; duration: string; embedUrl: string }
 export const videos: VideoItem[] = [
  { id: 'v1', title: 'Premier League: latest highlights & goals', category: 'Highlights', duration: 'Playlist', embedUrl: latestEmbedUrl(youtubeChannels[0].channelId) },
- { id: 'v2', title: 'LALIGA: latest highlights & goals', category: 'Highlights', duration: 'Playlist', embedUrl: latestEmbedUrl(youtubeChannels[1].channelId) },
+ { id: 'v2', title: 'ESPN: latest sports coverage', category: 'Multi-sport', duration: 'Playlist', embedUrl: latestEmbedUrl(youtubeChannels[1].channelId) },
  { id: 'v3', title: 'SuperSport (DStv/GOtv): latest sports coverage', category: 'Multi-sport', duration: 'Playlist', embedUrl: latestEmbedUrl(youtubeChannels[2].channelId) },
  { id: 'v4', title: 'Bundesliga: latest highlights & goals', category: 'Highlights', duration: 'Playlist', embedUrl: latestEmbedUrl(youtubeChannels[3].channelId) },
 ]
